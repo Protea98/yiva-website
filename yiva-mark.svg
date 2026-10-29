@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
+  <title>YIVA mark</title>
+  <circle cx="60" cy="60" r="58" fill="#1E2A47"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 99 V68" stroke="#D9A0A0" stroke-width="11"/>
+    <path d="M60 69 C55 57 47 50 41 39" stroke="#D9A0A0" stroke-width="11"/>
+    <path d="M60 69 C65 57 73 50 79 39" stroke="#D9A0A0" stroke-width="11"/>
+  </g>
+  <g transform="translate(38 29) rotate(-22)">
+    <rect x="-7.5" y="-3" width="15" height="13" rx="5" fill="#F4EEEC"/>
+    <g stroke="#F4EEEC" stroke-width="3.6" stroke-linecap="round" fill="none">
+      <path d="M-5.6 -1 V-11"/><path d="M-1.9 -1 V-14.5"/><path d="M1.9 -1 V-13.5"/><path d="M5.6 -1 V-10"/>
+      <path d="M6.5 5 L12.5 -1.5"/>
+    </g>
+  </g>
+  <g transform="translate(120 0) scale(-1 1)">
+    <g transform="translate(38 29) rotate(-22)">
+      <rect x="-7.5" y="-3" width="15" height="13" rx="5" fill="#F4EEEC"/>
+      <g stroke="#F4EEEC" stroke-width="3.6" stroke-linecap="round" fill="none">
+        <path d="M-5.6 -1 V-11"/><path d="M-1.9 -1 V-14.5"/><path d="M1.9 -1 V-13.5"/><path d="M5.6 -1 V-10"/>
+        <path d="M6.5 5 L12.5 -1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

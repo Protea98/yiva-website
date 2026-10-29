@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="YIVA SASL Interpretation provides South African Sign Language interpreting, SASL training and language services in Rustenburg, North West, for government, companies, schools and families.">
+<meta property="og:title" content="YIVA SASL Interpretation">
+<meta property="og:description" content="South African Sign Language interpreting, training and language services. Rustenburg, North West.">
+<meta property="og:image" content="yiva-logo.png">
+<link rel="icon" href="yiva-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="yiva-mark.png">
+<title>YIVA SASL Interpretation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: YIVA leads in navy; services and booking on light paper; the founder section sits inside YIVA on a soft rose ground, written in Muneer's own voice. */
+:root{
+  --paper:#F6F1F0; --paper-2:#EDE4E2; --blush:#F1E0DF; --ink:#1B2236; --ink-soft:#4C5468;
+  --navy:#1E2A47; --navy-2:#273559; --rose:#C98586; --rose-deep:#A4605F;
+  --on-navy:#F4EEEC; --on-navy-soft:#B9C0D2; --line:#DDD0CE; --line-navy:rgba(244,238,236,.18);
+  --display:"Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --body:"Instrument Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#15192A; --paper-2:#1C2236; --blush:#2A2333; --ink:#EEE7E6; --ink-soft:#AEB4C6;
+  --navy:#0E1424; --navy-2:#18213A; --rose:#DE9C9C; --rose-deep:#E7AAAA;
+  --on-navy:#F1EAE9; --on-navy-soft:#A6AEC4; --line:#2E3550; --line-navy:rgba(241,234,233,.16); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#15192A; --paper-2:#1C2236; --blush:#2A2333; --ink:#EEE7E6; --ink-soft:#AEB4C6;
+  --navy:#0E1424; --navy-2:#18213A; --rose:#DE9C9C; --rose-deep:#E7AAAA;
+  --on-navy:#F1EAE9; --on-navy-soft:#A6AEC4; --line:#2E3550; --line-navy:rgba(241,234,233,.16); color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--navy)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.05}
+p{margin:0}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-deep)}
+section{scroll-margin-top:70px}
+.btn{display:inline-flex;align-items:center;text-decoration:none;font-weight:600;font-size:16px;padding:13px 22px;border-radius:999px;border:1.5px solid currentColor}
+.btn.rose{background:var(--rose);border-color:var(--rose);color:#1E2A47}
+.btn:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+.photo{margin:0}
+.photo img{display:block;width:100%;height:auto;border-radius:6px}
+
+/* Nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--navy);color:var(--on-navy);border-bottom:1px solid var(--line-navy)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:.06em}
+.brand img{width:34px;height:34px;border-radius:50%;box-shadow:0 0 0 1.5px var(--line-navy)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav a.pill{display:inline-block;text-decoration:none;font-size:15px;font-weight:500;padding:7px 13px;border-radius:999px;color:var(--on-navy-soft)}
+.nav a.pill:hover{color:var(--on-navy);background:var(--navy-2)}
+.nav a.pill.cta{background:var(--rose);color:#1E2A47}
+@media (max-width:680px){.nav .hide-sm{display:none}}
+
+/* Hero */
+.hero{background:var(--navy);color:var(--on-navy)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center;padding-block:64px 80px}
+.hero .mark{width:84px;height:84px;border-radius:50%;box-shadow:0 0 0 2px var(--line-navy)}
+.hero h1{font-size:clamp(44px,7vw,88px);font-weight:800;letter-spacing:-.03em;margin-top:28px}
+.hero h1 span{color:var(--rose)}
+.hero .lead{font-size:clamp(18px,2vw,21px);color:var(--on-navy-soft);max-width:42ch;margin-top:22px;line-height:1.5}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero .photo figcaption{font-size:14px;color:var(--on-navy-soft);margin-top:10px}
+.hero .eyebrow{color:var(--rose)}
+
+/* Services */
+.band{padding-block:80px}
+.sec-head{display:grid;gap:12px;margin-bottom:36px;max-width:60ch}
+.sec-head h2{font-size:clamp(32px,4.4vw,50px);font-weight:700;letter-spacing:-.025em}
+.sec-head p{color:var(--ink-soft);font-size:18px}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.svc{background:var(--paper);padding:28px}
+.svc h3{font-size:23px;font-weight:700}
+.svc p{color:var(--ink-soft);margin-top:10px;font-size:16px}
+.svc ul{margin:14px 0 0;padding-left:18px;font-size:15px}
+.svc li+li{margin-top:4px}
+.who{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chip{border:1px solid var(--line);background:var(--paper-2);border-radius:999px;padding:7px 15px;font-size:15px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;margin-top:72px}
+.split h3{font-family:var(--display);font-size:28px;font-weight:700;margin-top:8px}
+.steps{list-style:none;counter-reset:s;margin:20px 0 0;padding:0;display:grid;gap:14px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:start}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:15px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--on-navy);display:grid;place-items:center}
+
+/* Founder */
+.founder{background:var(--blush)}
+.founder .wrap{padding-block:88px}
+.f-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.f-photos{position:relative;padding-bottom:64px}
+.f-photos .main{max-width:420px}
+.f-photos .small{position:absolute;right:0;bottom:0;width:42%;max-width:190px;border:6px solid var(--blush);border-radius:10px}
+.f-photos .small img{border-radius:4px}
+.founder h2{font-size:clamp(36px,5vw,58px);font-weight:800;letter-spacing:-.03em;margin-top:10px}
+.founder h2 span{color:var(--rose-deep)}
+.f-copy{display:grid;gap:18px;margin-top:24px;font-size:18px;max-width:60ch}
+.f-copy .sign{font-family:var(--display);font-weight:700;font-size:22px;color:var(--rose-deep)}
+.quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px;margin-top:36px;border-top:1px solid var(--line)}
+.quick div{padding:14px 0;border-bottom:1px solid var(--line)}
+.quick dt{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+.quick dd{margin:4px 0 0;font-weight:500}
+
+/* CV */
+.cv{margin-top:64px;border-top:2px solid var(--rose);padding-top:8px}
+.cv summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:18px;font-family:var(--display);font-weight:700;font-size:26px}
+.cv summary::-webkit-details-marker{display:none}
+.cv summary .hint{font-family:var(--body);font-size:15px;font-weight:600;color:var(--rose-deep);border:1.5px solid currentColor;border-radius:999px;padding:6px 14px;white-space:nowrap}
+.cv[open] summary .hint .o{display:none}
+.cv:not([open]) summary .hint .c{display:none}
+.cv-body{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:56px;padding-top:20px}
+.timeline{border-left:2px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 30px 28px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-8px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--blush);border:3px solid var(--rose)}
+.job .when{font-size:14px;font-weight:600;color:var(--rose-deep);font-variant-numeric:tabular-nums}
+.job h4{font-family:var(--display);font-size:20px;font-weight:700;margin:2px 0 0}
+.job .org{color:var(--ink-soft);font-size:15px}
+.job ul{margin:8px 0 0;padding-left:18px;font-size:15px}
+.cv-side{display:grid;gap:32px;align-content:start}
+.cv-side h4{font-family:var(--display);font-size:19px;font-weight:700;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:15px}
+.list b{display:block;font-weight:600;font-size:16px}
+.list span{color:var(--ink-soft)}
+.lang{display:grid;gap:8px;font-size:15px}
+.lang div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+.lang em{font-style:normal;color:var(--ink-soft)}
+.cv .note{font-size:15px;color:var(--ink-soft);margin-top:28px}
+
+/* Contact */
+.contact-band{background:var(--navy);color:var(--on-navy)}
+.contact-band .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;padding-block:80px;align-items:center}
+.contact-band h2{font-size:clamp(32px,4.4vw,50px);font-weight:700;letter-spacing:-.025em}
+.contact-band p.sub{color:var(--on-navy-soft);font-size:18px;margin-top:14px;max-width:40ch}
+.contact-band .eyebrow{color:var(--rose)}
+.contact{display:grid;gap:12px}
+.crow{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;background:var(--navy-2);border-radius:8px;padding:16px 20px}
+.crow small{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy-soft)}
+.crow .val{font-size:19px;font-weight:600;user-select:all;word-break:break-word}
+.copy{font:inherit;font-size:14px;font-weight:600;background:transparent;color:var(--on-navy);border:1px solid var(--line-navy);border-radius:999px;padding:7px 14px;cursor:pointer}
+.copy:hover{background:rgba(255,255,255,.08)}
+footer{background:var(--navy);color:var(--on-navy-soft);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-block:22px 30px;border-top:1px solid var(--line-navy)}
+
+@media (max-width:900px){
+  .hero .wrap,.split,.f-grid,.cv-body,.contact-band .wrap{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr}
+  .hero .wrap{gap:44px;padding-block:44px 64px}
+  .f-photos{max-width:460px}
+}
+@media (max-width:480px){
+  body{font-size:16px}
+  .quick{grid-template-columns:1fr}
+  .cv summary{font-size:22px}
+}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="yiva-mark.svg" width="34" height="34" alt="">YIVA</a>
+    <ul>
+      <li class="hide-sm"><a class="pill" href="#services">Services</a></li>
+      <li class="hide-sm"><a class="pill" href="#booking">Booking</a></li>
+      <li><a class="pill" href="#founder">About</a></li>
+      <li><a class="pill cta" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <img class="mark" src="yiva-mark.svg" width="84" height="84" alt="YIVA logo">
+      <h1>YIVA SASL <span>Interpretation</span></h1>
+      <p class="lead">South African Sign Language interpreting, training and language services for government departments, companies, schools and families.</p>
+      <div class="actions">
+        <a class="btn rose" href="#contact">Request an interpreter</a>
+        <a class="btn" href="#services">See services</a>
+      </div>
+    </div>
+    <figure class="photo">
+      <img src="muneer-teaching.jpg" width="1000" height="715" alt="Muneer Omarjee in front of a whiteboard during a training session">
+      <figcaption>Muneer Omarjee, founder, at a training session</figcaption>
+    </figure>
+  </div>
+</header>
+
+<section class="band" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Services</p>
+      <h2>Clear communication between Deaf and hearing people</h2>
+    </div>
+    <div class="services">
+      <article class="svc">
+        <h3>Interpreting</h3>
+        <p>Simultaneous and consecutive SASL–English interpreting.</p>
+        <ul>
+          <li>Meetings and official sessions</li>
+          <li>Government and public events</li>
+          <li>Workshops and training days</li>
+          <li>School, medical and social work appointments</li>
+        </ul>
+      </article>
+      <article class="svc">
+        <h3>SASL training</h3>
+        <p>Practical sign language classes for people who work or live with Deaf people.</p>
+        <ul>
+          <li>SASL classes for staff teams</li>
+          <li>Classes for families of Deaf children</li>
+          <li>Deaf awareness workshops</li>
+        </ul>
+      </article>
+      <article class="svc">
+        <h3>Language services</h3>
+        <p>Support for organisations that want their content accessible in SASL.</p>
+        <ul>
+          <li>Terminology research and preparation</li>
+          <li>Editing and review</li>
+          <li>SASL video content and awareness campaigns</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="split" id="booking">
+      <div>
+        <p class="eyebrow">Who YIVA serves</p>
+        <h3>From boardrooms to classrooms</h3>
+        <div class="who">
+          <span class="chip">Government departments</span>
+          <span class="chip">Municipalities</span>
+          <span class="chip">Mines and private companies</span>
+          <span class="chip">Schools for the Deaf</span>
+          <span class="chip">NGOs and community programmes</span>
+          <span class="chip">Families of Deaf children</span>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Booking</p>
+        <h3>How to book</h3>
+        <ol class="steps">
+          <li><span>Send the date, time and venue, or the online meeting link.</span></li>
+          <li><span>Tell us the type of session, how long it runs and who the audience is.</span></li>
+          <li><span>Share any agendas, slides or documents so terminology can be prepared beforehand.</span></li>
+          <li><span>Receive a quote and confirmation.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="founder" id="founder">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-photos">
+        <figure class="photo main"><img src="muneer-hero.jpg" width="900" height="1117" alt="Muneer Omarjee standing with arms crossed"></figure>
+        <figure class="photo small"><img src="muneer-portrait.jpg" width="600" height="796" alt="Portrait of Muneer Omarjee in a navy work jacket"></figure>
+      </div>
+      <div>
+        <p class="eyebrow">About the founder</p>
+        <h2>Hi, I'm <span>Muneer</span></h2>
+        <div class="f-copy">
+          <p>Sign language has been my work since university, where I majored in South African Sign Language at North-West University in Potchefstroom.</p>
+          <p>For four years I taught English, SASL and Maths at Kutlwanong School for the Deaf. Some of my learners were also on the autism spectrum. I interpreted in school meetings, and for children, parents, social workers and school nurses in the community. I've also taught SASL to families of Deaf children, helped at Deaf sport events in Gqeberha, and interpreted for the Department of Public Works and Joburg e-Services.</p>
+          <p>I started YIVA so that Deaf people and the organisations around them can get an interpreter who knows the language and the community.</p>
+          <p class="sign">Muneer Omarjee</p>
+        </div>
+        <dl class="quick">
+          <div><dt>Home</dt><dd>Rustenburg, North West</dd></div>
+          <div><dt>Languages</dt><dd>SASL, English, Afrikaans</dd></div>
+          <div><dt>Studied</dt><dd>BA Language and Literature, NWU</dd></div>
+          <div><dt>Experience</dt><dd>Four years at a school for the Deaf</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <details class="cv" id="cv">
+      <summary>My background <span class="hint"><span class="o">Show</span><span class="c">Hide</span></span></summary>
+      <div class="cv-body">
+        <div class="timeline">
+          <article class="job"><p class="when">Jun 2026 – Present</p><h4>Founder</h4><p class="org">YIVA SASL Interpretation</p>
+            <ul><li>Founded a SASL interpreting business for government and private clients.</li><li>Familiar with government tender and procurement systems.</li></ul></article>
+          <article class="job"><p class="when">Jun 2026 – Present</p><h4>Stores Controller</h4><p class="org">TKR Operations, Tharisa Mine</p>
+            <ul><li>Manage and control two stores supplying drill rigs, drill bits and equipment.</li><li>Lead major stock counts and prepare opening and closing stock reports.</li><li>Reconcile stock movements and variances in Excel.</li><li>Build AI automations that speed up reporting and data capture.</li></ul></article>
+          <article class="job"><p class="when">Feb 2026 – May 2026</p><h4>Facilitator</h4><p class="org">TKR Operations</p>
+            <ul><li>Facilitated training and group sessions for operations staff.</li></ul></article>
+          <article class="job"><p class="when">Nov 2025 – Jan 2026</p><h4>Stock Taker and Sales Consultant</h4><p class="org">Cape Union Mart</p>
+            <ul><li>Conducted stock takes and served customers.</li></ul></article>
+          <article class="job"><p class="when">Jun 2025 – Nov 2025</p><h4>SASL Interpreter, part-time</h4><p class="org">Subcontracted to Afro Miaki Group</p>
+            <ul><li>Interpreted SASL–English for the Department of Public Works and Joburg e-Services.</li><li>Researched topics, terminology and audiences before each assignment.</li></ul></article>
+          <article class="job"><p class="when">Jun 2025 – Sep 2025</p><h4>Community Liaison Officer</h4><p class="org">Community and contractors</p>
+            <ul><li>Liaised between the community and contractors, mediating concerns and keeping both sides informed.</li></ul></article>
+          <article class="job"><p class="when">2025</p><h4>SASL Facilitator, part-time</h4><p class="org">Musiekus</p>
+            <ul><li>Taught South African Sign Language to families of Deaf children.</li></ul></article>
+          <article class="job"><p class="when">Feb 2021 – Dec 2024</p><h4>Teacher</h4><p class="org">Kutlwanong School for the Deaf</p>
+            <ul><li>Taught English, SASL and Mathematics to Deaf learners, including learners on the autism spectrum.</li><li>Interpreted SASL–English in school meetings for four years.</li><li>Organised the annual North-West University visit to the school every September.</li></ul></article>
+          <article class="job"><h4>Deaf community and other work</h4>
+            <ul><li>Community interpreting for Deaf children, parents, social workers and school nurses.</li><li>Deaf Awareness Month activities every September.</li><li>Assisted with Deaf sport events in Gqeberha, 2024.</li><li>Created a SASL video for Nando's TikTok, 2024.</li><li>Facilitator at Mount Amanzi (2020–2021) and YFC CYARA (2017).</li></ul></article>
+        </div>
+        <div class="cv-side">
+          <div><h4>Education</h4><ul class="list">
+            <li><b>BA in Language and Literature</b><span>North-West University, Potchefstroom. SASL major.</span></li>
+            <li><b>BA Honours in SASL</b><span>Wits. SASL linguistics and research coursework.</span></li>
+            <li><b>PGCE, Intermediate Phase</b><span>Cornerstone Institute. Partially completed.</span></li>
+            <li><b>National Senior Certificate</b><span>Grade 12, 2016</span></li></ul></div>
+          <div><h4>Training</h4><ul class="list">
+            <li>TEFL, Level 5 (180 hours)</li><li>ARA facilitation certificate</li><li>MDT Supervision certificate</li><li>Wilderness First Aid, Level 2</li></ul></div>
+          <div><h4>Languages</h4><div class="lang">
+            <div><span>SASL</span><em>Excellent</em></div><div><span>English</span><em>Excellent</em></div><div><span>Afrikaans</span><em>Excellent</em></div><div><span>Setswana</span><em>Basic</em></div><div><span>isiXhosa</span><em>Basic</em></div></div></div>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="contact-band" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Book an interpreter</h2>
+      <p class="sub">Call, WhatsApp or email with your date, venue and type of session, and you'll get a quote back.</p>
+    </div>
+    <div class="contact">
+      <div class="crow"><div><small>Phone and WhatsApp</small><span class="val">+27 76 126 1774</span></div><button class="copy" id="copy-phone" type="button" data-copy="+27761261774">Copy</button></div>
+      <div class="crow"><div><small>Email</small><span class="val">muneerbryan@gmail.com</span></div><button class="copy" id="copy-email" type="button" data-copy="muneerbryan@gmail.com">Copy</button></div>
+      <div class="crow"><div><small>Based in</small><span class="val">Rustenburg, North West</span></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 YIVA SASL Interpretation</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=b.getAttribute('data-copy');
+    var reset=function(){setTimeout(function(){b.textContent='Copy'},1600)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(b.parentNode.querySelector('.val'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';reset()};
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';reset()},fallback)}catch(e){fallback()}
+  });
+});
+</script>
+
+</body>
+</html>
